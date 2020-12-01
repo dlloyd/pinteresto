@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% embed "explore.html.twig" %}{% endembed %}
+<section class="bg-gray200 pt-5 pb-5">
+<div class="container">
+
+</div>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <h5 class="font-weight-bold">Résultat(s)</h5>
+    <div class="card-columns">
+      {% for img in res %}
+      <div class="card card-pin">
+        <img class="card-img" src="{{img.getImageUrl}}" alt="image">
+        <div class="overlay">
+          <h2 class="card-title title"> {{img.name}} </h2>
+          <div class="more">
+            <a href="{{ path('single_image',{id:img.id}) }}">
+            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Voir plus </a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+
+    </div>
+  </div>
+</div>
+</section>
+{% endblock %}

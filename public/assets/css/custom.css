@@ -1,0 +1,9 @@
+.pagination{
+  align-items: center;
+  justify-content: center;
+  margin-top:20px;
+}
+
+.pagination span{
+  margin:10px;
+}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<section class="bg-gray200 pt-5 pb-5">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-7">
+      <article class="card">
+      <img class="card-img-top mb-2" src="{{image.getImageUrl}}" alt="image">
+      <div class="card-body">
+        <h1 class="card-title display-4">
+        {{image.name}} </h1>
+        <form action="{{ path('delete_image', {'id': image.id}) }}" method="post">
+            <input type="hidden" name="_method" value="DELETE" />
+
+            <input type="hidden" name="token" value="{{ csrf_token('delete-item') }}"/>
+
+            <input type="submit" style="background-color:red" value="Supprimer" />
+        </form>
+      </div>
+      </article>
+    </div>
+  </div>
+</div>
+
+</section>
+{% endblock %}
