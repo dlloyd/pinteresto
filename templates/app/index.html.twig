@@ -17,7 +17,7 @@
         <div class="overlay">
           <h2 class="card-title title"> {{image.name}} </h2>
           <div class="more">
-            <a href="{{ path('my_single_image',{id:image.id}) }}">
+            <a href="{{ path('single_image',{id:image.id}) }}">
             <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> Voir plus </a>
 
 
@@ -25,7 +25,7 @@
         </div>
       </div>
       {% endfor %}
-    
+
     </div>
   </div>
   {{ knp_pagination_render(images) }}

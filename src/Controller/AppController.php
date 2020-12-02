@@ -18,7 +18,7 @@ class AppController extends AbstractController
     public function index(Request $request, PaginatorInterface $paginator): Response
     {
         $imgs = $this->getDoctrine()->getRepository(Images::class)->findAll();
-        $images = $paginator->paginate($imgs,$request->query->getInt('page',1),3);
+        $images = $paginator->paginate($imgs,$request->query->getInt('page',1),10);
         return $this->render('app/index.html.twig',['images'=>$images]);
     }
 
