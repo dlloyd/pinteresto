@@ -19,10 +19,10 @@
                 <a href="{{ path('app_logout') }}">Logout</a>
               </div>
               {% endif %}
-              <div class="card-header mb-3">Please sign in</div>
+              <div class="card-header mb-3">Connectez-vous</div>
               <div class="form-group">
                 <label for="username" class="col-md-4 control-label"
-                  >Username</label
+                  >Pseudo</label
                 >
                 <div class="col-md-12">
                   <input
@@ -38,7 +38,7 @@
               </div>
               <div class="form-group">
                 <label for="password" class="col-md-4 control-label"
-                  >Password</label
+                  >Mot de passe</label
                 >
                 <div class="col-md-12">
                   <input
@@ -58,11 +58,12 @@
               <div class="form-group">
                 <div class="col-md-12">
                   <button type="submit" class="btn btn-primary">
-                    <i class="fa fa-btn fa-sign-in"></i> Login
+                    <i class="fa fa-btn fa-sign-in"></i> Se connecter
                   </button>
                 </div>
               </div>
             </form>
+            <a href="{{ path('registration')}}" style="margin-left:13px" > Créer un compte </a>
           </div>
         </div>
       </div>
